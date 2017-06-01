@@ -1,7 +1,8 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import reducers from "../reducers";
+import reducers from "./reducers";
 import {createLogger} from 'redux-logger';
+import { loginUserByToken } from '../containers/Login/actions';
 
 // add the middlewares
 let middlewares = [];
@@ -24,10 +25,10 @@ const store = createStore(reducers, middleware);
 
 if (module.hot) {
   module.hot.accept(() => {
-    const nextRootReducer = require('../reducers').default;
-    store.replaceReducer(nextRootReducer)
+    store.replaceReducer(reducers)
   })
 }
 
+store.dispatch(loginUserByToken());
 // export
-export { store };
+export { store, reducers };

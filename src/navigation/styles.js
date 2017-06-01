@@ -8,7 +8,7 @@ export default {
     right: 0,
     height: Metrics.navBarHeight,
     paddingTop: Metrics.smallMargin,
-    paddingHorizontal: 5,
+    paddingHorizontal: Metrics.baseMargin,
     backgroundColor: Colors.backgroundColorOpacity,
     flexDirection: 'row',
     justifyContent: 'space-between'
@@ -25,24 +25,17 @@ export default {
   rightButtons: {
     flex: 1,
     justifyContent: 'flex-end',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   leftButtons: {
     flex: 1,
     justifyContent: 'flex-start',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
-  drawerIcon:{
+  icon:{
     backgroundColor: Colors.transparent,
     justifyContent: 'center',
     marginTop: Metrics.baseMargin,
-    marginLeft: Metrics.baseMargin
-  },
-  backIcon: {
-    backgroundColor: Colors.transparent,
-    justifyContent: 'center',
-    marginTop: Metrics.baseMargin,
-    marginLeft: Metrics.baseMargin
   },
   tabBar:{
     backgroundColor: Colors.backgroundColorOpacity,

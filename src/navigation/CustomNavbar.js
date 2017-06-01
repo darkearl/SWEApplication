@@ -31,9 +31,10 @@ class CustomNavbar extends React.Component {
     )
   }
   renderRightButtons () {
+    const button = NavItems.notificationButton();
     return (
       <View style={Styles.rightButtons}>
-
+        {button}
       </View>
     )
   }

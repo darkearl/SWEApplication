@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "271979946942",
+    "firebase_url": "https://swe-contact.firebaseio.com",
+    "project_id": "swe-contact",
+    "storage_bucket": "swe-contact.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271979946942:android:8d624b3100fbd044",
+        "android_client_info": {
+          "package_name": "com.sweapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271979946942-n26bebnsqkuu15d0bq91nq93q3u8evmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF20EKES1OWrJjoNUXmFKcTFRWQ35EiSM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

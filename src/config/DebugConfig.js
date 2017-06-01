@@ -1,4 +1,4 @@
 export default {
-  useFixtures: true,
+  useFixtures: false,
   yellowBox: false
 }

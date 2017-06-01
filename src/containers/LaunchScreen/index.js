@@ -1,24 +1,16 @@
-import React, {Component, PropTypes} from 'react';
-import {ScrollView, View, Text, Image} from 'react-native';
+import React, { Component } from 'react';
+import {ScrollView, View,  Image} from 'react-native';
 import { connect } from 'react-redux';
-import { Actions } from 'react-native-router-flux';
-import { loginUserByToken } from '../../actions/Auth/login';
 import { Images } from '../../assets/themes';
 import Loading from '../../components/Loading';
 import styles from './styles';
 
 class LaunchScreen extends Component {
-  componentDidMount() {
-    const {dispatch} = this.props;
-    dispatch(loginUserByToken())
-      .then(()=>Actions.main())
-      .catch(()=>Actions.login())
-  }
   render() {
-    const {loginReducer} = this.props
+    const {userReducer} = this.props
     return (
       <View style={styles.mainContainer}>
-        <Loading visible={loginReducer.isFetching}/>
+        <Loading visible={userReducer.isFetching}/>
         <Image source={Images.background} style={styles.backgroundImage}/>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainerStyle}>
           <View style={styles.centered}>
@@ -32,7 +24,7 @@ class LaunchScreen extends Component {
 
 function mapStateToProps(state) {
   return {
-    loginReducer : state.login
+    userReducer : state.user
   }
 }
 

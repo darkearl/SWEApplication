@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Field,reduxForm } from 'redux-form';
 import {View, Text, TouchableOpacity, TouchableHighlight, KeyboardAvoidingView} from 'react-native';
 import styles from './styles';
-import { Input } from '../Form';
-import Loading from '../Loading';
+import { Input } from '../../components/Form';
+import Loading from '../../components/Loading';
 
 const validate = values => {
   let {email, password} = values
@@ -13,21 +13,21 @@ const validate = values => {
   return errors
 };
 
-class LoginScene extends Component {
+class LoginForm extends Component {
   static propTypes = {
     onSubmit: PropTypes.func,
-    loginReducer: PropTypes.object
+    userReducer: PropTypes.object
   };
   constructor(props){
     super(props)
   }
 
   render() {
-    const { handleRegisterRoute, handleSubmit, loginReducer, pristine, submitting, onSubmit } = this.props;
+    const { handleRegisterRoute, handleSubmit, userReducer, pristine, submitting, onSubmit } = this.props;
     const disable = (pristine || submitting);
     return (
       <KeyboardAvoidingView behavior="padding" style={styles.section}>
-        <Loading visible={loginReducer.isFetching}/>
+        <Loading visible={userReducer.isFetching}/>
         <View style={styles.containerInput}>
           <Field
             name='email'
@@ -63,4 +63,4 @@ class LoginScene extends Component {
 export default reduxForm({
   form: 'loginForm',
   validate
-})(LoginScene);
+})(LoginForm);

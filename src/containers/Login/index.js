@@ -1,11 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { focus } from 'redux-form';
-import { Actions } from 'react-native-router-flux';
-import { login } from '../../actions/Auth/login';
-import LoginScene from './../../components/Auth/LoginScene';
+import { login } from './actions';
+import LoginForm from './LoginForm';
 import { View, Image, ScrollView, Linking } from 'react-native';
-import {Images,Metrics} from '../../assets/themes';
+import {Images} from '../../assets/themes';
 import styles from './styles';
 
 class Login extends Component {
@@ -20,8 +19,7 @@ class Login extends Component {
   }
   handleOnSubmit(values){
     let {email, password} = values;
-    this.props.dispatch(login(email,password))
-      .then(()=>{Actions.main()});
+    this.props.dispatch(login(email,password));
   }
   render() {
     return (
@@ -31,8 +29,8 @@ class Login extends Component {
           <View style={styles.logoContainer}>
             <Image style={styles.logo} source={Images.logo}/>
           </View>
-          <LoginScene
-            loginReducer={this.props.loginReducer}
+          <LoginForm
+            userReducer={this.props.userReducer}
             onSubmit={this.handleOnSubmit}
             focusField={this.props.focusField}
             handleRegisterRoute={this.handleRegisterRoute}
@@ -46,7 +44,7 @@ class Login extends Component {
 
 function mapStateToProps(state) {
   return {
-    loginReducer : state.login
+    userReducer : state.user
   }
 }
 

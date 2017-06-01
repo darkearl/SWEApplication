@@ -18,7 +18,11 @@ const colors = {
   inputIconColor:'#959596',
   //tabbar
   iconColor: '#FFF',
-  iconSelectedBackgroundColor:'#8c88ff'
-}
+  iconSelectedBackgroundColor:'#8c88ff',
+  //status notification
+  confirmColor: '#62D7C8',
+  unConfirmColor: '#FCAB53',
+  cancelColor: '#FF3366',
+};
 
 export default colors

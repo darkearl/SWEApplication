@@ -1,7 +1,7 @@
 import Fonts from './Fonts'
 import Metrics from './Metrics'
 import Colors from './Colors'
-
+import { Platform } from 'react-native'
 // This file is for a reusable grouping of Theme items.
 // Similar to an XML fragment layout in Android
 
@@ -21,7 +21,7 @@ const ApplicationStyles = {
       height: null,
     },
     container: {
-      // paddingTop: Metrics.baseMargin,
+      paddingTop: Metrics.navBarHeight,
     },
     contentContainerStyle:{
       //for scrollview
@@ -89,7 +89,6 @@ const ApplicationStyles = {
     },
     textInput:{
       color: Colors.textInputColor,
-      height: Metrics.textInputHeight,
       paddingHorizontal: Metrics.marginHorizontal,
       flex: 1,
     },

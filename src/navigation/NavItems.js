@@ -3,6 +3,7 @@ import { TouchableOpacity } from 'react-native'
 import Styles from './styles'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Colors, Metrics } from '../assets/themes'
 
 const openDrawer = () => {
@@ -11,7 +12,6 @@ const openDrawer = () => {
     open: true
   })
 }
-
 export default {
   backButton () {
     return (
@@ -19,7 +19,7 @@ export default {
         <Icon name='angle-left'
               size={Metrics.icons.medium}
               color={Colors.white}
-              style={Styles.backIcon}
+              style={Styles.icon}
         />
       </TouchableOpacity>
     )
@@ -30,7 +30,18 @@ export default {
         <Icon name='bars'
               size={Metrics.icons.medium}
               color={Colors.white}
-              style={Styles.drawerIcon}
+              style={Styles.icon}
+        />
+      </TouchableOpacity>
+    )
+  },
+  notificationButton () {
+    return (
+      <TouchableOpacity onPress={()=>NavigationActions.listNotification()}>
+        <Ionicons name='ios-notifications'
+              size={Metrics.icons.medium}
+              color={Colors.white}
+              style={Styles.icon}
         />
       </TouchableOpacity>
     )

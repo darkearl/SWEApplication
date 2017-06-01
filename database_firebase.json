@@ -1,0 +1,54 @@
+{
+  "groups" : {
+    "All" : {
+      "notifications" : {
+        "-KlHzyugQYv8N-AQGDSv" : true
+      },
+      "users" : {
+        "UXJCU04rY3apEjHtHG7fX5e2ibf1" : true
+      }
+    },
+    "Design" : true,
+    "Dev" : {
+      "notifications" : {
+        "-KlI03DJ23OIx8Ux0MvY" : true
+      },
+      "users" : {
+        "UXJCU04rY3apEjHtHG7fX5e2ibf1" : true
+      }
+    }
+  },
+  "notifications" : {
+    "-KlHzyugQYv8N-AQGDSv" : {
+      "group" : "All",
+      "id" : "-KlHzyugQYv8N-AQGDSv",
+      "message" : "abc",
+      "status" : 1,
+      "time" : 1496041123992,
+      "userID" : "UXJCU04rY3apEjHtHG7fX5e2ibf1"
+    },
+    "-KlI03DJ23OIx8Ux0MvY" : {
+      "group" : "Dev",
+      "id" : "-KlI03DJ23OIx8Ux0MvY",
+      "message" : "ghjhhh",
+      "status" : 2,
+      "time" : 1496041404962,
+      "userID" : "TnZSDIFhUTYuWIANSkSZ6ELAyBH3"
+    }
+  },
+  "users" : {
+    "UXJCU04rY3apEjHtHG7fX5e2ibf1" : {
+      "devices" : {
+        "Android" : {
+          "token1" : "xyz",
+          "token2" : "asdddd"
+        },
+        "IOS" : {
+          "token3" : 321321
+        }
+      },
+      "displayname" : "tho trung",
+      "userID" : "UXJCU04rY3apEjHtHG7fX5e2ibf1"
+    }
+  }
+}
