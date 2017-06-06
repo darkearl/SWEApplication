@@ -20,7 +20,8 @@ export const getUser = (userid) => {
 export const createNewUser = (userId) => {
   let userProfile = {
     "userID" : userId,
-    "displayName": ''
+    "displayName": '',
+    "email": ''
   };
   db.ref('users/' + userId).set(userProfile);
   db.ref('groups/All/users/'+ userId).set(true);
@@ -35,4 +36,16 @@ export const removeUser = (userId) => {
 
 export const signOutUser = () => {
   auth.signOut();
+};
+
+export const updateProfile = (userData) => {
+  const userId = userData.uid;
+  let userProfile = {
+    "userID" : userId,
+    "displayName": '',
+    "email": userData.email
+  };
+  db.ref('users/' + userId).set(userProfile);
+  db.ref('groups/All/users/'+ userId).set(true);
+  return Promise.resolve(userProfile);
 };

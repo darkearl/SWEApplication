@@ -5,11 +5,11 @@ import { Colors, Metrics } from '../../assets/themes';
 import Styles from './styles';
 class TabIcon extends Component {
   render() {
-    let {selected, tabIcon} = this.props
+    let {selected, name} = this.props;
     return (
       <View style={[Styles.container,selected ? {backgroundColor:Colors.iconSelectedBackgroundColor}: null]}>
         <Icon
-          name={tabIcon }
+          name={name }
           size={Metrics.icons.medium}
           color={ Colors.iconColor }
           style={Styles.icon}
@@ -20,6 +20,6 @@ class TabIcon extends Component {
 }
 
 TabIcon.propTypes = {
-  tabIcon:PropTypes.string.isRequired
-}
+  name:PropTypes.string.isRequired
+};
 export default TabIcon

@@ -6,7 +6,7 @@ export default StyleSheet.create({
     height: Metrics.icons.small *2,
     borderRadius: Metrics.icons.small,
     width: Metrics.icons.small *2 ,
-    backgroundColor: 'transparent',
+    backgroundColor: Colors.transparent,
     justifyContent:'center'
   },
   icon: {
